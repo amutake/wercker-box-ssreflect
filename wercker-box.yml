@@ -1,0 +1,33 @@
+name: ssreflect
+version: 0.0.1
+description: Latest Coq
+type: main
+inherits: amutake/coq@0.0.1
+platform: ubuntu@12.04
+keywords:
+  - coq
+  - ssreflect
+  - mathcomp
+packages:
+  - coq@8.4pl4
+  - ssreflect@1.5
+  - mathcomp@1.5
+script: |
+  # variables
+  export SSR_VER=1.5
+
+  # install ssreflect
+  cd
+  wget http://ssr.msr-inria.inria.fr/FTP/ssreflect-${SSR_VER}.tar.gz
+  tar xf ssreflect-${SSR_VER}.tar.gz
+  cd ssreflect-${SSR_VER}
+  make -j 4
+  sudo make install
+
+  # install mathcomp
+  cd
+  wget http://ssr.msr-inria.inria.fr/FTP/mathcomp-${VER}.tar.gz
+  tar xf mathcomp-${SSR_VER}.tar.gz
+  cd mathcomp-${SSR_VER}
+  make -j 4
+  sudo make install
