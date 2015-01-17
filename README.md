@@ -1,7 +1,7 @@
 SSReflect Box
 =============
 
-This is a wercker box for latest stable ssreflect/mathcomp.
+This is a wercker box for the latest stable ssreflect/mathcomp.
 
 License
 -------

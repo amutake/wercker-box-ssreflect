@@ -1,15 +1,15 @@
 name: ssreflect
-version: 0.0.1
+version: 0.0.2
 description: wercker box for ssreflect/mathcomp
 type: main
-inherits: amutake/coq@0.0.1
+inherits: amutake/coq@0.0.2
 platform: ubuntu@12.04
 keywords:
   - coq
   - ssreflect
   - mathcomp
 packages:
-  - coq@8.4pl4
+  - coq@8.4pl5
   - ssreflect@1.5
   - mathcomp@1.5
 script: |
